@@ -1,6 +1,5 @@
 /*Importerar alla partials*/
 
-@use "base";
 @use "components";
 @use "layout";
 @use "mixins";
@@ -8,8 +7,57 @@
 @use "variables";
 
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body{
     background-color: variables.$background-color;
-    color: variables.$background-color-dark;
+    max-width: 100%;
+    margin: 0 auto;   
 }
+
+
+body,
+html {
+ width: 100%;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ line-height: 1.6;
+ font-family: "Outfit", serif;
+}
+
+main{
+background-color: variables.$main-color;
+width: 100%;
+margin: 0 auto;
+padding: 1.4rem;
+padding-left: 3rem;
+flex: 1;
+}
+
+
+h1, h2, h3{
+    color: variables.$headings-color;
+}
+
+p{
+color: variables.$paragraph-color;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
