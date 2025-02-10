@@ -1,0 +1,15 @@
+/*Importerar alla partials*/
+
+@use "base";
+@use "components";
+@use "layout";
+@use "mixins";
+@use "themes";
+@use "variables";
+
+
+
+body{
+    background-color: variables.$background-color;
+    color: variables.$background-color-dark;
+}
