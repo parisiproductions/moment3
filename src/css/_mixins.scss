@@ -1,3 +1,4 @@
+
 @use "variables";
 
 
@@ -21,10 +22,23 @@
 
   .button {
     @include button-style(variables.$button-color, variables.$button-text);
-
-   
 }
   
+
+
+@mixin logo($lightTheme: true) {
+  @if $lightTheme {
+      content: url("../images/kattcafelogo.svg"); // Logotyp för ljust tema
+  } @else {
+      content: url("../images/logoDarkmode.svg"); // Logotyp för mörkt tema
+  }
+}
+
+
+
+
+
+
 
   /* Media queries*/
 /* Skärmar mindre än eller lika med 1024px */

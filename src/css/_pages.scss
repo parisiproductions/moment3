@@ -10,17 +10,16 @@
 
 .welcome-section {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.336)), 
               url("../images/perser.webp") no-repeat center/cover;
   display: flex;
+  gap: 3.5rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
 
-  
 
     h1, h2{
         text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
@@ -54,15 +53,17 @@
     .text-block {
         flex: 1;
     
-      h2 {
+      h1 {
         margin-bottom: 1rem;
-      }
+        font-size: clamp(1.5rem, 5vw, 3rem);
+
+      
 
       p {
         margin-bottom: 1rem;
        
-      }
-    }
+      
+    }}}
 
 
     .image-block {
@@ -91,9 +92,23 @@
 /* Skärmar mindre än eller lika med 1024px */
 @media (max-width: 1024px) {
 
+
   .welcome-section {
-    background-size: contain; 
-}
+    position: relative;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.336)), 
+                url("../images/perser.webp") no-repeat center/cover;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+  
+
+  }
+
 
 
     .info-section1, .info-section2 {
@@ -107,6 +122,28 @@ margin-top: 3rem;
 
 
 @media (max-width: 599px) {
+
+
+  .welcome-section {
+    position: relative;
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.336)), 
+                url("../images/perser.webp") no-repeat center/cover;
+    display: flex;
+    gap: 1.7rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+  }
+
+
+
+
+
+
+
     .button-container {
         flex-direction: column;
 
