@@ -1,12 +1,20 @@
 
-$background-color: #f5dae4;
-$main-color: #f7f3f3;
+$light-pink: #f5dae4;
+$white:  #f7f3f3;
+$cerise:  #86113c;
 
+
+
+$background-color: $light-pink;
+$main-color: $white;
+$button-color: $cerise;
+$accent-color: rgb(221, 147, 8);
 
 
 $headings-color: darken($background-color, 40%);
 $paragraph-color: darken($background-color, 80%);
+$menu-color: darken($background-color, 20%);
 
 
 
-$button-color: #86113c;
+

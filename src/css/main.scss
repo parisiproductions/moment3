@@ -2,6 +2,7 @@
 
 @use "components";
 @use "layout";
+@use "pages";
 @use "mixins";
 @use "themes";
 @use "variables";
@@ -34,7 +35,6 @@ main{
 background-color: variables.$main-color;
 width: 100%;
 margin: 0 auto;
-
 flex: 1;
 }
 
