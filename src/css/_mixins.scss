@@ -22,10 +22,8 @@
   .button {
     @include button-style(variables.$button-color, variables.$button-text);
 
-    i{
-      font-size: 1.3rem;
-      margin-left: 0.5rem;
-}}
+   
+}
   
 
   /* Media queries*/
@@ -34,7 +32,7 @@
 @media (max-width: 1024px) {
 
     .button {
-        font-size: 1rem;
+        font-size: 0.9rem;
       
     }
 
