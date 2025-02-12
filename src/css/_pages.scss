@@ -14,12 +14,11 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.336)), 
                 url("../images/perser.webp") no-repeat center/cover;
     display: flex;
-    gap: 2.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+  
   
 
     h1, h2{
@@ -91,11 +90,21 @@
 /* Skärmar mindre än eller lika med 1024px */
 @media (max-width: 1024px) {
 
+  .welcome-section {
+    background-size: contain; 
+}
+
+
+
     .info-section1, .info-section2 {
         flex-direction: column;
 margin-top: 3rem;
         padding: 2rem;   
     }
+
+
+
+
 
 }
 
