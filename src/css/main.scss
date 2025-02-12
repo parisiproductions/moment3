@@ -27,7 +27,7 @@ html {
  display: flex;
  flex-direction: column;
  line-height: 1.6;
- font-family: "Outfit", serif;
+ font-family: "Outfit", Georgia, 'Times New Roman', serif;
 }
 
 main{
@@ -45,12 +45,12 @@ h1, h2, h3{
 
 
 h1{
-    font-size: clamp(1.5rem, 5vw, 2.7rem);
+    font-size: clamp(1.5rem, 5vw, 4rem);
 
     }
     
     h2{
-    font-size: clamp(1.2rem, 3.5vw, 2rem);   
+    font-size: clamp(1.2rem, 3.5vw, 3rem);   
     }
 
     
