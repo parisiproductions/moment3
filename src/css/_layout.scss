@@ -2,171 +2,157 @@
 
 /* Header och navigation */
 
+
+
+.top-header{
+    background-color: variables.$background-color;
+}
+
+
+
+.logo{
+    padding: 1.5rem;
+}
+
+.logo img{
+    width: 100%; 
+    height: auto;
+}
+
+
 .navigation {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+    justify-content: space-evenly;
     gap: 2rem;
-    max-width: 1300px;
-    margin: auto;
+    align-items: center;
+    padding-top: 1rem;
+    width: 100%;
 
-    .logo {
-        flex-shrink: 0;
-
-
-        img {
-            width: auto;
-            height: 100px; 
-        }
-    }
-
-    nav {
-        flex-grow: 1;
-        display: flex;
-        justify-content: flex-end;
-
-        ul {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            flex-wrap: nowrap; 
-
-            li {
-                white-space: nowrap;
-
-                a {
-                    text-decoration: none;
-                    font-size: 1.3rem;
-                    color: variables.$paragraph-color;
-                    padding: 0.8rem 1rem;
-                    transition: color 0.3s ease-in-out;
-
-                    &:hover {
-                        color: variables.$accent-color;
-                    }
-                }
-            }
-        }
-
-        .nav-link-active {
-            color: variables.$headings-color;
-            font-weight: bold;
-            position: relative;
-
-            &::after {
-                content: "";
-                display: block;
-                width: 100%;
-                height: 3px;
-                background: variables.$accent-color;
-                position: absolute;
-                bottom: -5px;
-                left: 0;
-            }
-        }
-    }
-
-    .hamburger-btn, .close-btn {
-        display: none;
-        margin-left: auto;
-        background: none;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-    }
 }
 
-/* Responsiv design */
-@media (max-width: 1100px) {
 
-    .navigation {
+#nav-menu {
+    display: flex;
+    flex-direction: row; 
+    gap: 2rem; 
+    align-items: center; 
+    justify-content: center;
+    padding-top: 1rem;
+    background-color: white;
+    width: 100%;
 
-        nav {
-            ul {
-                gap: 1rem; 
-
-                li {
-                    a {
-                        font-size: 1.1rem;
-                        padding: 0.9rem;
-                    }
-                }
-            }
-        }
-    }
 }
 
-@media (max-width: 900px) {
-    .navigation {
-        nav {
-            ul {
-                gap: 0.5rem;
-
-                li {
-                    a {
-                        font-size: 1rem;
-                    }
-                }
-            }
-        }
+#nav-menu a:hover{
+    background-color: #ffffffa8
     }
+
+nav{
+    display: none;
+ul {
+    display: flex; 
+    flex-direction: row;  
+    justify-content: space-between;
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+
+}
+li {
+    padding-bottom: 0.7rem;
+}
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: variables.$paragraph-color;
+    padding: 1.1rem 1.5rem 1.1rem;
+    background-color: white;
+    text-transform: uppercase;
+}
 }
 
-/* Hamburgermeny aktiveras vid 768px */
-@media (max-width: 768px) {
+.nav-link-active{
+ color: variables.$headings-color;
+font-weight: bold;
+padding: 1.1rem 1.5rem 1.1rem;
+}
+
+
+
+/* Hamburgermeny och stäng-knapp */
+.hamburger-btn, .close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.hamburger-btn {
+    display: none; /* Dölj hamburgarknappen */
+}
+
+/* Stäng-knapp */
+#close-menu {
+    display: none; /* Dölj stäng-knappen som standard */
+}
+
+
+
+/* Media queries*/
+/* Skärmar mindre än eller lika med 1024px */
+@media (max-width: 1024px) {
+
+    .hamburger-btn {
+        display: block; /* Visa hamburgarknappen */
+    }
+
     .navigation {
-        padding: 1rem 2rem;
+        justify-content:space-between;
+        padding-right: 1rem;
         flex-direction: row;
-        justify-content: space-between;
-        gap: 6rem;
+    }
+    
+    #nav-menu {
+        display: none; 
+        flex-direction: column;
+        background-color: variables.$background-color;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        z-index: 1000;
+    }
 
-
-
-
-        .logo {
-            flex-grow: 1; 
+        nav a {
+            background-color:  variables.$background-color;
         }
 
-
-        .hamburger-btn {
-            display: block;
-            margin-left: auto;
+        .nav-link-active{
+            background-color: grey;
         }
+        
+    #nav-menu ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-        nav {
-            display: none;
-            flex-direction: column;
-            background-color: variables.$background-color;
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 250px;
-            height: 100vh;
-            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-            padding: 1rem;
-            z-index: 1000;
+    #nav-menu.hidden {
+        display: none; 
+    }
 
-            ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
+    #close-menu {
+        display: block; 
+    }
 
-            #close-menu {
-                display: block;
-                background: none;
-                border: none;
-                font-size: 2rem;
-                cursor: pointer;
-                margin-bottom: 1rem;
-            }
-        }
 
-        #nav-menu.hidden {
-            display: none;
-        }
+
+    .logo img{
+        width: 70%; 
+        height: auto;
     }
 }
