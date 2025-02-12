@@ -1,19 +1,25 @@
 
 $light-pink: #f5dae4;
-$white:  #f7f3f3;
+$white: #f3f3f3;
+$pink-white:  #f7ebf2;
 $cerise:  #86113c;
+$black: #111111;
 
 
 
 $background-color: $light-pink;
-$main-color: $white;
-$button-color: $cerise;
-$accent-color: rgb(221, 147, 8);
+$main-color: $pink-white;
+
+$button-color: saturate(#86113c, 20%);
+$button-text: $white;
+
 
 
 $headings-color: darken($background-color, 40%);
-$paragraph-color: darken($background-color, 80%);
-$menu-color: darken($background-color, 20%);
+$paragraph-color: $black;
+
+$menu-background-color: lighten($cerise, 60%);
+$menu-link-color: $black;
 
 
 
