@@ -26,17 +26,13 @@
   
 
 
-@mixin logo($lightTheme: true) {
-  @if $lightTheme {
-      content: url("../images/kattcafelogo.svg"); // Logotyp för ljust tema
+@mixin logo($theme) {
+  @if $theme == "light" {
+      content: url($logo-light); // Logotyp för ljust tema
   } @else {
-      content: url("../images/logoDarkmode.svg"); // Logotyp för mörkt tema
+      content: url($logo-dark); // Logotyp för mörkt tema
   }
 }
-
-
-
-
 
 
 

@@ -14,6 +14,9 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="../images/katt.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="../images/katt.ico">
 
+<!--Font awesome-->
+<script src="https://kit.fontawesome.com/a4237efc0a.js" crossorigin="anonymous"></script>
+
         <link rel="stylesheet" href="../css/main.scss">
 
    <script src="../js/app.js" type="module"></script>
@@ -22,21 +25,21 @@
 <body>
     
     <header class="navigation">
-        <div class="logo">
-            <a href="../index.html" aria-label="Gå till startsidan">
-                <img src="../images/kattcafelogo.svg" alt="Logotyp" width="510" height="62">
-            </a>
-        </div>
+       <!--Logo för mörkt tema och standard-->
+       <picture class="logo">
+        <source srcset="../images/logoDark.svg" media="(prefers-color-scheme: dark)">
+        <img src="../images/kattcafelogo.svg" alt="Logotyp" width="510" height="62">
+    </picture>
     
-        <!-- Hamburgermenyn -->
-        <button id="open-menu" aria-label="Öppna meny" class="hamburger-btn">
-            <img src="../images/bars-solid.svg" alt="Öppna meny" width="32" height="32">
+          <!-- Hamburgermenyn -->
+          <button id="open-menu" aria-label="Öppna meny" class="hamburger-btn">
+            <i class="fa-solid fa-bars icon"></i>
         </button>
     
         <nav id="nav-menu">
             <!-- Stäng-knapp -->
             <button id="close-menu" aria-label="Stäng meny" class="close-btn">
-                <img src="../images/xmark-solid.svg" alt="Öppna meny" width="32" height="32">  
+                <i class="fa-solid fa-xmark icon"></i>
             </button>
             <ul>
                 <li><a href="../index.html" >Start</a></li>

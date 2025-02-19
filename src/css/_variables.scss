@@ -12,6 +12,7 @@ $black: #111111;
 
 
 $background-color: $light-pink;
+$hamburger-menu-color: $black;
 $main-color: $pink-white;
 $button-color: saturate($cerise, 20%);
 $button-text: $white;
@@ -25,7 +26,7 @@ $menu-link-color: $black;
 
 :root {
     --background-color: #f5dae4;
-    --text-color: #111111; 
+    // --text-color: #111111; 
     --heading-color: #d62264;;
     --main-color: #f7ebf2;
 }
@@ -40,5 +41,8 @@ $menu-link-color: $black;
     }
 }
 
-$lightTheme: true;
+/*Olika logo beroende på tema*/
+$logo-light: "./images/kattcafelogo.svg";
+$logo-dark: "./images/logoDark.svg";
+
 
